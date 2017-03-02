@@ -1,0 +1,21 @@
+<div class="col m4" *ngFor="let product of allProducts">
+    <div class="card">
+        <div class="card-image">
+            <img src="../../assets/images/{{product.images}}" alt="{{product.name}}">
+            <span class="card-title">{{product.name}} -- {{product.price |  number:'4.0-2'}}đ</span>
+            <a (click)="onDelete($event,product)" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">delete</i></a>
+            <div class="btn_edit">
+                <a (click)="onEdit($event,product)" href="#modal_edit" class="btn-floating halfway-fab waves-effect waves-light green accent-4"><i class="material-icons">create</i></a>
+                <edit-product [infoProduct]="product"></edit-product>
+            </div>
+        </div>
+        <div class="card-content">
+            <p class="truncate">
+                {{product.description}}
+            </p>
+        </div>
+        <div class="card-action center-align" >
+            {{product.created_at | date:"MM/dd/yy"}}
+        </div>
+    </div>
+</div>

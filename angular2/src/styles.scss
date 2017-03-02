@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import "~materialize-css/sass/components/color"; /* This must be included to use the included variables and the color function */
+$primary-color: color("indigo", "base");
+$secondary-color: color("green", "accent-4");
+$roboto-font-path: "~materialize-css/fonts/roboto/"; /* This is needed so the materialize.scss file can load the font */
+@import "~materialize-css/sass/materialize";
+.text-capitalize{
+    text-transform:capitalize !important;
+}
+.toast{
+    background: #234475;
+    .success{
+        color: #0cf66e;
+        font-weight:500;
+    }
+    .error{
+        color: #ff2222;
+        font-weight:500;
+    }
+}
